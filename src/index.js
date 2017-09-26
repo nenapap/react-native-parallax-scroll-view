@@ -267,9 +267,10 @@ class ParallaxScrollView extends Component {
   }
 
   _renderFooterSpacer({ contentBackgroundColor }) {
-    return (
-      <View ref={ref => this._footerComponent = ref } style={{ backgroundColor: contentBackgroundColor }}/>
-    );
+    return null;
+    // return (
+    //   <View ref={ref => this._footerComponent = ref } style={{ backgroundColor: contentBackgroundColor }}/>
+    // );
   }
 
   _maybeRenderStickyHeader({ parallaxHeaderHeight, stickyHeaderHeight, backgroundColor, renderFixedHeader, renderStickyHeader }) {
