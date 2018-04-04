@@ -1,9 +1,19 @@
+import {Dimensions, Platform} from 'react-native'
 const StyleSheet = require('react-native').StyleSheet;
+
+function isIphoneX(width,height){
+  if (Platform.OS === "ios" && width == 375 && height == 812){
+      return true;
+  } else {
+      return false;
+  }
+}
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'transparent'
+    backgroundColor: 'transparent',
+    overflow: 'hidden'
   },
   parallaxHeaderContainer: {
     backgroundColor: 'transparent',
@@ -27,7 +37,8 @@ const styles = StyleSheet.create({
     left: 0
   },
   scrollView: {
-    backgroundColor: 'transparent'
+    backgroundColor: 'transparent',
+    marginTop: isIphoneX(Dimensions.get("window").width,Dimensions.get("window").height) ? -45: 0
   }
 });
 

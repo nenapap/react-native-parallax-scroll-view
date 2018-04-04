@@ -288,7 +288,7 @@ class ParallaxScrollView extends Component {
                   height: stickyHeaderHeight,
                   opacity: interpolate(scrollY, {
                     inputRange: [0, 0.1 * p, p],
-                    outputRange: [0, 0.95, 1],
+                    outputRange: [0, 1, 1],
                     extrapolate: 'clamp'
                   })
                 }}>
