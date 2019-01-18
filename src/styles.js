@@ -1,13 +1,6 @@
 import {Dimensions, Platform} from 'react-native'
 const StyleSheet = require('react-native').StyleSheet;
-
-function isIphoneX(width,height){
-  if (Platform.OS === "ios" && width == 375 && height == 812){
-      return true;
-  } else {
-      return false;
-  }
-}
+import {isIphoneX} from '../../../src/utils'
 
 const styles = StyleSheet.create({
   container: {
